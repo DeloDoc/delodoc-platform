@@ -7,8 +7,9 @@ module.exports = {
         'plugin:css-modules/recommended',
     ],
     parser: '@typescript-eslint/parser',
-    plugins: ['import', 'prettier', 'react-hooks', 'css-modules'],
+    plugins: ['import', 'prettier', 'react-hooks', 'css-modules', 'react-refresh'],
     rules: {
+        'react-refresh/only-export-components': 'warn',
         'no-restricted-syntax': 'off',
         'spaced-comment': [
             'error',
