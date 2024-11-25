@@ -1,0 +1,19 @@
+.FormField {
+    padding-top: var(--gap-m);
+    text-align: left;
+}
+
+.FormFieldLabel {
+    color: var(--text-primary);
+}
+
+.FormFieldInput {
+    padding-top: var(--gap-xs);
+}
+
+.FormFieldDescription {
+    display: inline-block;
+
+    padding: var(--gap-xs) var(--gap-xs) 0;
+    color: var(--text-secondary);
+}

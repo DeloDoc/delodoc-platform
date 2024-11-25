@@ -1,0 +1,20 @@
+.Text {
+    color: var(--text-color);
+    font-weight: var(--text-weight);
+    font-size: var(--text-size);
+}
+
+.Text_strike {
+    text-decoration: line-through;
+}
+
+.Text_ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Text_lines {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--text-lines);
+    -webkit-box-orient: vertical;
+}

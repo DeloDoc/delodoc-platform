@@ -1,0 +1,28 @@
+.GradientCircle {
+    display: inline-block;
+    border-radius: 100%;
+    background-image: linear-gradient(to right, var(--circle-main-color), var(--circle-secondary-color));
+    width: 1.5rem;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    font-weight: 500;
+    font-size: 0.625rem;
+    line-height: 1.5rem;
+
+    letter-spacing: -1.5px;
+    user-select: none;
+    text-align: center;
+}
+
+.GradientCircleDarken {
+    color: white;
+}
+
+.GradientCircleLighten {
+    color: black;
+}
+
+.GradientCircleSize {
+    width: var(--circle-size);
+    height: var(--circle-size);
+}

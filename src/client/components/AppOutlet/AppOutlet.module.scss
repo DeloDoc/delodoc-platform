@@ -1,0 +1,13 @@
+.AppOutlet {
+    padding: 0 var(--gap-m);
+}
+
+.AppOutletHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: var(--gap-m);
+
+    min-height: 32px;
+}

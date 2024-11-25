@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "stylelint-value-no-unknown-custom-properties"
+  ],
+  "rules": {
+    "csstools/value-no-unknown-custom-properties": [true, {
+      "importFrom": [
+        "public/base.css",
+        "public/theme/dark.css",
+        "public/theme/light.css"
+      ]
+    }]
+  }
+}

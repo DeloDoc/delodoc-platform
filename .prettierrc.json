@@ -1,0 +1,18 @@
+{
+  "overrides": [
+    {
+      "files": ["*.pcss", "*.scss"],
+      "options": {
+        "parser": "scss",
+        "plugins": ["prettier-plugin-css-order"]
+      }
+    }
+  ],
+  "parser": "typescript",
+  "arrowParens": "always",
+  "jsxSingleQuote": false,
+  "endOfLine": "auto",
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all"
+}

@@ -1,0 +1,57 @@
+// https://pris.ly/d/prisma-schema
+
+generator kysely {
+  provider = "prisma-kysely"
+  output   = "../src/server/database"
+  fileName = "types.ts"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id            String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  active        Boolean       @default(true)
+  name          String?
+  email         String        @unique
+  emailVerified DateTime?
+  password      String
+  image         String?
+  role          Role          @default(USER)
+  projects      Project[]
+  settings      UserSettings?
+
+  createdAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @db.Timestamp()
+  updatedAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @updatedAt
+}
+
+model UserSettings {
+  id     String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @unique @db.Uuid
+
+  theme String?
+
+  createdAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @db.Timestamp()
+  updatedAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @updatedAt
+}
+
+model Project {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title       String
+  slug        String
+  description String?
+  archived    Boolean?
+  owner       User     @relation(fields: [ownerId], references: [id])
+  ownerId     String   @db.Uuid
+
+  createdAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @db.Timestamp()
+  updatedAt DateTime @default(dbgenerated("timezone('utc'::text, now())")) @updatedAt
+}

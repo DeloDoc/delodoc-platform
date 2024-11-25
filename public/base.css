@@ -1,0 +1,49 @@
+:root {
+    --base-white: hsl(0 0% 100%);
+    --base-black: hsl(0 0% 0%);
+    --base-dark-1: hsl(240 10% 4%);
+    --base-dark-2: hsl(240 10% 6%);
+    --base-dark-3: hsl(240 8% 9%);
+    --base-dark-4: hsl(240 9% 13%);
+    --base-dark-5: hsl(240 9% 16%);
+    --base-dark-6: hsl(240 9% 21%);
+    --base-light-1: hsl(240 9% 98%);
+    --base-light-2: hsl(240 10% 96%);
+    --base-light-3: hsl(240 10% 94%);
+    --base-light-4: hsl(240 10% 90%);
+    --base-light-5: hsl(240 8% 86%);
+    --base-light-6: hsl(240 8% 81%);
+
+    --font-size-xxs: 0.5rem;
+    --font-size-xs: 0.75rem;
+    --font-size-s: 0.875rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.25rem;
+    --font-size-xl: 1.75rem;
+    --font-size-xxl: 3rem;
+
+    --font-weight-bolder: 800;
+    --font-weight-bold: 600;
+    --font-weight-regular: 400;
+    --font-weight-thin: 300;
+    --font-weight-thinner: 200;
+
+    --line-height-xxs: 1.5;
+    --line-height-xs: 1.5;
+    --line-height-s: 1.5;
+    --line-height-m: 1.5;
+    --line-height-l: 1.15;
+    --line-height-xl: 1.15;
+    --line-height-xxl: 1;
+
+    --gap-xs: 0.25rem;
+    --gap-s: 0.5rem;
+    --gap-sm: 0.75rem;
+    --gap-m: 1rem;
+    --gap-l: 2rem;
+    --gap-xl: 4rem;
+    --radius-s: 4px;
+    --radius-m: 6px;
+    --radius-l: 12px;
+    --radius-xl: 20px;
+}

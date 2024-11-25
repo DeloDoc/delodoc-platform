@@ -1,0 +1,25 @@
+.LoadingProgress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: var(--LoadingProgress-height);
+}
+
+.LoadingProgress__Bar {
+    display: flex;
+    position: relative;
+    transition: width 0.6s linear;
+    width: 0;
+    height: 100%;
+}
+
+.LoadingProgress__Inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--LoadingProgress-color);
+}

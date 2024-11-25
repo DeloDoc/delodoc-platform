@@ -1,0 +1,131 @@
+.Input {
+    display: flex;
+    position: relative;
+    flex: 1;
+    transition: 200ms ease-in;
+    transition-property: border;
+    border-radius: var(--radius-m);
+
+    padding: 6px var(--gap-sm);
+    color: var(--text-primary);
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-xl);
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        border: 1px solid var(--input-border-disabled);
+        background: var(--input-disabled);
+        color: var(--text-disabled);
+
+        &::placeholder {
+            color: var(--text-disabled);
+        }
+    }
+}
+
+.Input_default {
+    border: 1px solid var(--input-border);
+    background: var(--input-fill);
+
+    &:focus-visible {
+        border: 1px solid var(--input-border-focused);
+        background: var(--input-fill-focused);
+    }
+
+    &:focus-visible ~ .Icon {
+        color: var(--text-secondary);
+    }
+
+    &::placeholder {
+        color: var(--text-ghost);
+    }
+}
+
+.Input_success {
+    border: 1px solid var(--primary-500);
+    background: var(--primary-900);
+    color: var(--primary-400);
+
+    &:focus-visible {
+        border: 1px solid var(--primary-500);
+        background: var(--primary-900);
+    }
+
+    &::placeholder {
+        color: var(--primary-400);
+    }
+}
+
+.Input_danger {
+    border: 1px solid var(--danger-500);
+    background: var(--danger-900);
+    color: var(--danger-400);
+
+    &:focus-visible {
+        border: 1px solid var(--danger-500);
+        background: var(--danger-900);
+    }
+
+    &::placeholder {
+        color: var(--danger-400);
+    }
+}
+
+.Wrapper {
+    display: flex;
+    position: relative;
+    min-height: 32px;
+}
+
+.Wrapper_icon_left .Input {
+    padding-left: var(--gap-l);
+}
+
+.Wrapper_icon_right .Input {
+    padding-right: var(--gap-l);
+}
+
+.Icon {
+    display: flex;
+
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: color 200ms ease-in-out 0s;
+    width: 20px;
+    height: 20px;
+    color: var(--text-ghost);
+}
+
+.Icon_left {
+    left: var(--gap-s);
+    pointer-events: none;
+}
+
+.Icon_right {
+    right: var(--gap-s);
+}
+
+.InputWrapper_brick + .InputWrapper_brick {
+    margin-left: 1px;
+}
+
+.Input_brick_center {
+    border-radius: 0;
+}
+
+.Input_brick_left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.Input_brick_right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
