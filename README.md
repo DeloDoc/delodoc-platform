@@ -1,6 +1,6 @@
-# DeloDoc Platform
+# Octodocs
 
-The documents platform
+The live documents platform
 
 ## Getting Started
 
@@ -23,4 +23,4 @@ Run the serve script: `npm run serve`.
 
 ## License
 
-[MIT](https://github.com/DeloDoc/delodoc-plaform/blob/main/LICENSE)
+[MIT](https://github.com/octodocs-platform/octodocs.io/blob/main/LICENSE)
