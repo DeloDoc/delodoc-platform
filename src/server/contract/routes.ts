@@ -4,20 +4,20 @@ const base = '';
 export const routes = {
     index: (b = base) => `${b}/~`,
 
-    authSignin: (b = base) => `${b}/auth/signin`,
-    authSignup: (b = base) => `${b}/auth/signup`,
-    authBootstrap: (b = base) => `${b}/auth/bootstrap`,
+    authSignin: () => `${base}/auth/signin`,
+    authSignup: () => `${base}/auth/signup`,
+    authBootstrap: () => `${base}/auth/bootstrap`,
 
-    userSettings: (b = base) => `${b}/settings`,
+    userSettings: () => `${base}/settings`,
 
-    posts: (b = base) => `${b}/posts`,
+    posts: () => `${base}/posts`,
 
-    tags: (b = base) => `${b}/tags`,
-    tagsNew: (b = base) => `${b}/tags/new`,
-    tagsId: (id: number | string, b = base) => `${b}/tags/${id}`,
+    tags: () => `${base}/tags`,
+    tagsNew: () => `${base}/tags/new`,
+    tagsId: (id: number | string) => `${base}/tags/${id}`,
 
-    api: (b = base) => `${b}/api`,
-    apiAuthRefresh: (b = base) => `${b}/api/auth.refresh`,
+    api: () => `${base}/api`,
+    apiAuthRefresh: () => `${base}/api/auth.refresh`,
 
     docs: () => '/docs',
     releases: () => '/releases',
