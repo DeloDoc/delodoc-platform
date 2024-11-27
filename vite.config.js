@@ -10,4 +10,11 @@ if (process.env.ANALYZE) {
 
 export default defineConfig({
     plugins,
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern',
+            },
+        },
+    },
 });
