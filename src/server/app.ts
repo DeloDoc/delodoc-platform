@@ -12,10 +12,7 @@ import { trpcRouter } from './routes';
 import { createContext } from './utils/trpcContext';
 import { configurePassport } from './passport';
 import { html } from './utils/html';
-import { cookies } from './contract/cookies';
 import { daysToMs } from './utils/date';
-import * as queries from './database/queries';
-import { routes } from './contract/routes';
 
 interface AppProps {
     mountPath?: string;
@@ -81,24 +78,6 @@ export const createApp = ({ mountPath }: AppProps) => {
             }
         });
     }
-
-    router.use([routes.authSignin(''), routes.authSignup(''), routes.authBootstrap('')], async (req, res, next) => {
-        const count = await queries.user.count();
-
-        if (count === 0) {
-            res.cookie(cookies.firstVisit, true, {
-                maxAge: daysToMs(1),
-            });
-
-            if (!req.baseUrl.endsWith(routes.authBootstrap())) {
-                res.redirect(routes.authBootstrap());
-            } else {
-                next();
-            }
-        } else {
-            next();
-        }
-    });
 
     return router;
 };
