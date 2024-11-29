@@ -1,0 +1,39 @@
+.LeanView {
+    display: block;
+    padding: 60px 100px;
+}
+
+.LeanEditor {
+    outline: none;
+}
+
+.CodeMark {
+    display: inline-block;
+    border-radius: 2px;
+    background-color: #f8f8f8;
+    padding: 2px 4px;
+}
+
+.BoldMark {
+    font-weight: bold;
+}
+
+.ItalicMark {
+    font-style: italic;
+}
+
+.DefaultElement {
+    display: block;
+}
+
+.SlashCommand {
+    display: inline-block;
+}
+
+.SlashCommandMenu {
+    position: relative;
+}
+
+.DefaultHeading {
+    display: block;
+}

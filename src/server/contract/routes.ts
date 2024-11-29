@@ -22,4 +22,6 @@ export const routes = {
     docs: () => '/docs',
     releases: () => '/releases',
     slack: () => '/slack',
+
+    slate: () => '/slate',
 };

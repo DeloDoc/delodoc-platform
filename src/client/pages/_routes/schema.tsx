@@ -2,6 +2,7 @@ import React, { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import { routes } from '../../../server/contract/routes';
+import { LazySlate } from '../slate/slate.lazy';
 
 import { protectedElement, publicElement } from './route';
 
@@ -65,5 +66,9 @@ export const schema = createBrowserRouter([
     {
         path: routes.authSignin(),
         element: publicElement(<LazySignin />),
+    },
+    {
+        path: routes.slate(),
+        element: publicElement(<LazySlate />),
     },
 ]);
